@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(0, 0%, 95%);
+  color: hsl(0, 0%, 95%);
+  padding-top: 5%;
+}
+main {
+  margin: auto;
+  display: grid;
+  grid-template-areas: "sedans suv luxery";
+  justify-content: space-evenly;
+  width: 70%;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+section {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 25% 0;
+  padding-left: 15%;
+}
+
+h2 {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 2.5rem;
+}
+
+p {
+  color: hsla(0, 0%, 100%, 0.75);
+  width: 60%;
+}
+
+a {
+  text-decoration: none;
+}
+
+.button {
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 25px;
+  height: 50px;
+  width: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button:hover {
+  cursor: pointer;
+}
+.button:active {
+  background-color: transparent;
+  border: hsl(0, 0%, 95%) solid 2px;
+  color: hsl(0, 0%, 95%);
+  cursor: pointer;
+}
+
+.button:active a {
+  color: inherit;
+}
+
+.Sedans {
+  grid-area: sedans;
+  background-color: hsl(31, 77%, 52%);
+}
+
+.Sedans a {
+  color: hsl(31, 77%, 52%);
+}
+
+.SUVs {
+  grid-area: suv;
+  background-color: hsl(184, 100%, 22%);
+}
+
+.SUVs a {
+  color: hsl(184, 100%, 22%);
+}
+
+.Luxury {
+  grid-area: luxery;
+  background-color: hsl(179, 100%, 13%);
+}
+
+.Luxury a {
+  color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (max-width: 1440px) {
+  body {
+    padding: 10% 0;
+  }
+  main {
+    grid-template-areas:
+      "sedans"
+      " suv"
+      "luxery";
+    justify-content: space-evenly;
+    width: 80%;
+    height: 1800px;
+  }
+  .button {
+    height: 50px;
+    width: 150px;
+  }
+}
